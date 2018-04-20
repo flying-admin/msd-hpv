@@ -1,0 +1,38 @@
+---
+title: Proyect Index
+layout: layout
+---
+<%= partial("shared/header", :locals => {
+  :extra_classes => ''
+}) %>
+
+<div class="content__wrapper">
+
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+
+  <%= partial("modules/slanted", :locals => {
+    :extra_classes => 'slanted--green',
+    :overflow => 'true',
+    :direction => 'right',
+    :image => 'http://placehold.it/400x600',
+    :title => '',
+    :text => '',
+    :button => {
+      :text => '',
+      :link => ''
+    }
+
+  }) %>
+
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+
+</div>
+<%= partial("shared/footer") %>

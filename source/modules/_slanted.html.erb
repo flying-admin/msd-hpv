@@ -1,0 +1,28 @@
+<%
+  extra_classes ||= ""
+  overflow ||= 'true'
+  direction ||= 'right'
+  image ||= ''
+  title ||= ''
+  text ||= ''
+  button ||= ''
+%>
+
+<div class="slanted <%= extra_classes %>
+  <% if(overflow == 'true') %> slanted--overflow <% else %> slanted--no-overflow <% end %>
+  <% if(direction == 'left') %> slanted--left <% else %> slanted--right <% end %>">
+  <div class="slanted__content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="<%= image %>" alt="" class="slanted__content__image">
+        </div>
+        <div class="col-md-6">
+          <p class="slanted__content__title"><%= title %></p>
+          <p class="slanted__content__text"><%= text %></p>
+          <a href="<%= button[:link] %>" class="btn slanted__content__button"><%= button[:text] %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
