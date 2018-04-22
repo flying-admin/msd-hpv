@@ -3,6 +3,36 @@
 %>
 <header class="header <%= extra_classes %>">
 
-<h1>Header Content</h1>
+  <div class="header--main">
+    <div class="content__wrapper">
+      <div class="header__content">
+        <div class="header__content__logo">
+          <%= image_tag("content/logo.png", :class => 'header__logo__logo') %>
+        </div>
+        <nav class="header__content__nav">
+          <ul>
+            <li>
+              <a href="#">Le Virus</a>
+            </li>
+            <li>
+              <a href="#">Le Depistage</a>
+            </li>
+            <li>
+              <a href="#">Les Consequences</a>
+            </li>
+            <li>
+              <a href="#">Protege-toi</a>
+            </li>
+            <li>
+              <a href="#">Vaccine-toi</a>
+            </li>
+            <li class="menu-lead">
+              <a href="#">Je suis parent</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 
 </header>
