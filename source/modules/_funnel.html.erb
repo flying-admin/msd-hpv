@@ -1,0 +1,32 @@
+<%
+  extra_classes ||= ""
+  reverse ||= 'false'
+  image ||= ''
+  title ||= ''
+  text ||= ''
+  button ||= ''
+%>
+
+<div class="funnel <%= extra_classes %>
+  <% if(reverse == 'true') %> funnel--reversed <% end %>">
+  <div class="container">
+    <div class="row between-xs middle-xs <% if(reverse == 'true') %> reverse <% end %>">
+      <div class="col-md-5 col-sm-6 col-xs-12">
+        <div class="funnel__content">
+          <p class="funnel__content__title"><%= title %></p>
+          <p class="funnel__content__text"><%= text %></p>
+          <%= partial("modules/button", :locals => {
+            :extra_classes => 'btn--primary funnel__content__button',
+            :extra_attributes => '',
+            :type => "link",
+            :text => button[:text],
+            :link => button[:link],
+          }) %>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <img src="<%= image %>" alt="" class="funnel__image">
+      </div>
+    </div>
+  </div>
+</div>

@@ -76,6 +76,12 @@
     }
   }
 
+  &--purple {
+    &::before {
+      background-image: linear-gradient(to top right, #EC7AFF, #271E7B);
+    }
+  }
+
 
   &__image {
     display: block;
@@ -94,10 +100,12 @@
     position: relative;
     width: 100%;
     height: auto;
-    z-index: 2;
+    margin: -5vw 0 0;
+    padding: 5vw 0;
 
     @include media('<phablet'){
       padding: 56px 15px 0;
+      margin: 0;
     }
 
     &__title {
