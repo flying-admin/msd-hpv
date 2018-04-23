@@ -1,66 +1,92 @@
 .slanted {
   display: block;
   position: relative;
-  top: -125px;
+  top: -10vw;
   width: 100%;
   height: auto;
-  padding: 125px 0 0;
-  margin: 0 0 -250px;
+  margin: 0 0 -20vw;
 
-  &--right {
-    &.slanted--overflow {
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        clip-path: polygon(0 0, 100% 125px, 100% 100%, 0 calc(100% - 125px));
-      }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10vw;
+    z-index: -1;
+  }
+
+  &--contains {
+    padding: 10vw 0 12vw;
+
+    @include media('<phablet'){
+      padding: 20vw 0;
+    }
+  }
+
+  &--no-contains {
+    padding: 10vw 0 0;
+
+    @include media('<phablet'){
+      padding: 20vw 0;
+    }
+  }
+
+  &--reversed {
+    &.slanted--contains {
+      padding: 12vw 0 10vw;
     }
 
+    &.slanted--no-contains {
+      padding: 12vw 0 0;
+    }
+  }
+
+  &--right {
+    &.slanted--overflow {}
+
     &.slanted--no-overflow {
-      clip-path: polygon(0 0, 100% 125px, 100% 100%, 0 calc(100% - 125px));
+      clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
+    }
+
+    &::before {
+      transform-origin: 0% 0%;
+      transform: skewY(5.7deg);
     }
   }
 
   &--left {
-    &.slanted--overflow {
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        clip-path: polygon(0 125px, 100% 0, 100% calc(100% - 125px), 0 100%);
-      }
-    }
+    &.slanted--overflow {}
 
     &.slanted--no-overflow {
-      clip-path: polygon(0 125px, 100% 0, 100% calc(100% - 125px), 0 100%);
+      clip-path: polygon(0 10vw, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    }
+
+    &::before {
+      transform-origin: 100% 0%;
+      transform: skewY(-5.7deg);
     }
   }
-
-
 
   &--green {
-    &.slanted--overflow {
-      &::before {
-        background-image: linear-gradient(124deg, #23EFDC -38%, #007D71 120%);
-      }
-    }
-
-    &.slanted--no-overflow {
-      background-image: linear-gradient(124deg, #23EFDC -38%, #007D71 120%);
+    &::before {
+      background-image: linear-gradient(to bottom right, #19D0BF, #04887C);
     }
   }
 
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+
+    @include media('<phablet'){
+      width: calc(100% - 30px);
+      margin: 0 auto;
+    }
+  }
 
   &__content {
     display: block;
@@ -68,5 +94,28 @@
     width: 100%;
     height: auto;
     z-index: 2;
+
+    @include media('<phablet'){
+      padding: 56px 15px 0;
+    }
+
+    &__title {
+      font-family: $font_title;
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 38px;
+      color: $white;
+      letter-spacing: 0;
+      margin: 0 0 35px;
+    }
+
+    &__text {
+      font-family: $font_default;
+      font-size: 16px;
+      line-height: 30px;
+      color: $white;
+      letter-spacing: 0;
+      margin: 0 0 30px;
+    }
   }
 }

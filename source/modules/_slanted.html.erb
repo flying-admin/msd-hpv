@@ -1,7 +1,9 @@
 <%
   extra_classes ||= ""
   overflow ||= 'true'
+  contains ||= 'false'
   direction ||= 'right'
+  reverse ||= 'false'
   image ||= ''
   title ||= ''
   text ||= ''
@@ -10,17 +12,25 @@
 
 <div class="slanted <%= extra_classes %>
   <% if(overflow == 'true') %> slanted--overflow <% else %> slanted--no-overflow <% end %>
-  <% if(direction == 'left') %> slanted--left <% else %> slanted--right <% end %>">
-  <div class="slanted__content">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="<%= image %>" alt="" class="slanted__content__image">
-        </div>
-        <div class="col-md-6">
+  <% if(contains == 'true') %> slanted--contains <% else %> slanted--no-contains <% end %>
+  <% if(direction == 'left') %> slanted--left <% else %> slanted--right <% end %>
+  <% if(reverse == 'true') %> slanted--reversed <% end %>">
+  <div class="container">
+    <div class="row between-xs middle-xs <% if(reverse == 'true') %> reverse <% end %>">
+      <div class="col-md-5 col-sm-6 col-xs-12">
+        <img src="<%= image %>" alt="" class="slanted__image">
+      </div>
+      <div class="col-md-5 col-sm-6 col-xs-12">
+        <div class="slanted__content">
           <p class="slanted__content__title"><%= title %></p>
           <p class="slanted__content__text"><%= text %></p>
-          <a href="<%= button[:link] %>" class="btn slanted__content__button"><%= button[:text] %></a>
+          <%= partial("modules/button", :locals => {
+            :extra_classes => 'slanted__content__button',
+            :extra_attributes => '',
+            :type => "link",
+            :text => button[:text],
+            :link => button[:link],
+          }) %>
         </div>
       </div>
     </div>
