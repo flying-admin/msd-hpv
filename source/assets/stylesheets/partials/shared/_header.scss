@@ -14,6 +14,9 @@
     margin: 0 auto;
 
     background-color: transparent;
+    @include media("<phablet") {
+      height: 71px;
+    }
   }
 
   &--prueba-visible {
@@ -23,7 +26,6 @@
   }
 
   &__content {
-    display: block;
     position: relative; 
     max-width: 1280px;
     margin: 0px auto;
@@ -34,6 +36,10 @@
     border-bottom: 1px solid rgba($white, 0.3);
     display: flex;
     justify-content: space-between;
+    @include media("<phablet") {
+      height: 71px;
+      padding: 10px 0;
+    }
     &__logo {
       height: 52px;
       &__logo {
@@ -41,9 +47,26 @@
         width: auto;
       }
     }
-    &__nav {
+    &__nav {      
+      @include media("<phablet") {
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        
+        top: 71px;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        transition: height 0.5s;
+        &.open {
+          height: calc(100vh - 71px);
+        }
+      }
       ul {
         display: flex;
+        @include media("<phablet") {
+          display: block;
+        }
         li {
           a {
             line-height: 52px;
@@ -56,6 +79,9 @@
             @include media("<tablet") {
               padding: 0 8px;
             }
+            @include media("<phablet") {
+              color: $black;
+            }
           }
           &.menu-lead {
             a {
@@ -65,8 +91,53 @@
         }
       }
     }
+    .btn-menu-mobile {
+      display: none;
+      @include media("<phablet") {
+        display: block;
+        background-color: transparent;
+        border: none;
+        padding: 11px;
+        height: 50px;
+        .menu-bar {
+          display: block;
+          width: 21px;
+          height: 3px;
+          background-color: $white;
+          position: relative;
+          margin: 0 auto;
+          &:before {
+            content: '';
+            display: block;
+            width: 21px;
+            height: 3px;
+            background-color: $white;
+            position: absolute;
+            top: -8px;
+            margin: 0 auto;
+          }
+          &:after {
+            content: '';
+            display: block;
+            width: 21px;
+            height: 3px;
+            background-color: $white;
+            position: absolute;
+            bottom: -8px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
   }
   &--sticky {
+    .header__content .btn-menu-mobile .menu-bar {
+      background-color: $blackish;
+      &:after,
+      &:before {
+        background-color: $blackish;
+      }
+    }
     .header--main {
       background-color: $white;
     }

@@ -26,6 +26,12 @@ $(window).on("load", function(){
       });
     }
   }
+
+  if ( $('.header').length > 0 ) {
+    $('.btn-menu-mobile').on('click', function(ev){
+      $('.header__content__nav').toggleClass('open');
+    });
+  }
 });
 
 $(window).on("resize", function(){
