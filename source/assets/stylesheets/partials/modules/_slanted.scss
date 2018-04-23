@@ -5,6 +5,7 @@
   width: 100%;
   height: auto;
   margin: 0 0 -20vw;
+  z-index: 1;
 
   &::before {
     content: '';
