@@ -37,20 +37,17 @@ $(window).on("load", function(){
 $(window).on("resize", function(){
   if ( $(window).width() < 768 ) {
     if ( $('.footer').length > 0 ) {
+      $('.footer__title').unbind('click');
+      $('.footer__title').on('click', function(ev) {
+        if ( $(this).is('.open') ) {
+          $(this).removeClass('open');
+          $(this).parent().find('.footer__nav').slideUp();
+        } else {
+          $(this).addClass('open');
+          $(this).parent().find('.footer__nav').slideDown();
+        }
 
-      if ( $(window).width() < 768 ) {
-
-        $('.footer__title').on('click', function(ev) {
-          if ( $(this).is('.open') ) {
-            $(this).removeClass('open');
-            $(this).parent().find('.footer__nav').slideUp();
-          } else {
-            $(this).addClass('open');
-            $(this).parent().find('.footer__nav').slideDown();
-          }
-
-        });
-      }
+      });
     }
   }
   else {
