@@ -1,0 +1,15 @@
+<%
+  extra_classes ||= ""
+  extra_attributes ||= ""
+  video_id ||= ""
+%>
+
+<div class="video <%= extra_classes %>" <%= extra_attributes %>>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <iframe src="https://www.youtube.com/embed/<%= video_id %>" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>

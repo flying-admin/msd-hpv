@@ -45,8 +45,12 @@ layout: layout
     </div>
   </div>
 
-  <br /><br /><br /><br /><br /><br />
-  <br /><br /><br /><br /><br /><br />
+  <!-- video_id:  -->
+  <%= partial("modules/video", :locals => {
+    :extra_classes => '',
+    :extra_attributes => '',
+    :video_id => "5C_gUic3cCo",
+  }) %>
 
   <%= partial("modules/slanted", :locals => {
     :extra_classes => 'slanted--green',
