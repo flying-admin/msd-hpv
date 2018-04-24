@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "d9e4001945c898b683307b0494844af275386f26426b1665b751c4480e6047a1",
-    "current": "d9e4001945c898b683307b0494844af275386f26426b1665b751c4480e6047a1"
+    "previous": "22545ad978b90c90d8f8d4103f9cdb281ccd9927fbd9a87137f5872933d31d45",
+    "current": "22545ad978b90c90d8f8d4103f9cdb281ccd9927fbd9a87137f5872933d31d45"
   },
   "fonts": [
     "./source/assets/fonts/msd-hpv-icons.ttf",
@@ -15,9 +15,25 @@
       "codepoint": 61697,
       "source": "./source/assets/images/icons/caret-down.svg"
     },
+    "facebook": {
+      "codepoint": 61699,
+      "source": "./source/assets/images/icons/facebook.svg"
+    },
+    "gplus": {
+      "codepoint": 61700,
+      "source": "./source/assets/images/icons/gplus.svg"
+    },
+    "linkedin": {
+      "codepoint": 61701,
+      "source": "./source/assets/images/icons/linkedin.svg"
+    },
     "scroll": {
       "codepoint": 61696,
       "source": "./source/assets/images/icons/scroll.svg"
+    },
+    "twitter": {
+      "codepoint": 61698,
+      "source": "./source/assets/images/icons/twitter.svg"
     }
   },
   "options": {
