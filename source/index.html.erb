@@ -20,27 +20,29 @@ layout: layout
   }) %>
 
   <br /><br /><br /><br /><br /><br />
-  <div class="container">
-    <div class="row middle-xs">
-      <div class="col-md-3 col-md-offset-2 col-sm-6 col-xs-12">
-        <img src="http://placehold.it/300x120" alt="">
-        <br /><br />
-        <p class="text text--tag text--center">de la population sexuellement active est un jour confrontée à une infection par l'HPV, dont la moitié entre 15 et 24 ans.</p>
-      </div>
-      <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
-        <p class="title">Qu'est-ce que le PAPILLOMAVIRUS?</p>
-        <p class="text">
-          Les Papillomavirus humains (HPV) sont une famille de virus qui ont pour spécificité d’infecter la peau et les muqueuses.<br /><br />
-          Il existe plus de 200 types d’HPV : ils peuvent toucher les organes génitaux internes et externes, la région anale, certaines parties de la peau ou encore la bouche, chez les femmes comme chez les hommes. On compte environ 20.000 nouveaux cas de verrues génitales et cancers liés a l'HPV par an en Belgique.
-        </p>
-        <br /><br />
-        <%= partial("modules/button", :locals => {
-          :extra_classes => 'btn--primary info__button',
-          :extra_attributes => '',
-          :type => "link",
-          :text => 'en savoir plus',
-          :link => '#',
-        }) %>
+  <div class="pad-xs-0-15">
+    <div class="container">
+      <div class="row middle-xs">
+        <div class="col-md-3 col-md-offset-2 col-sm-6 col-xs-12 hide-on-mobile">
+          <img src="http://placehold.it/300x120" alt="">
+          <br /><br />
+          <p class="text text--tag text--center">de la population sexuellement active est un jour confrontée à une infection par l'HPV, dont la moitié entre 15 et 24 ans.</p>
+        </div>
+        <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
+          <p class="title">Qu'est-ce que le PAPILLOMAVIRUS?</p>
+          <p class="text">
+            Les Papillomavirus humains (HPV) sont une famille de virus qui ont pour spécificité d’infecter la peau et les muqueuses.<br /><br />
+            Il existe plus de 200 types d’HPV : ils peuvent toucher les organes génitaux internes et externes, la région anale, certaines parties de la peau ou encore la bouche, chez les femmes comme chez les hommes. On compte environ 20.000 nouveaux cas de verrues génitales et cancers liés a l'HPV par an en Belgique.
+          </p>
+          <br /><br />
+          <%= partial("modules/button", :locals => {
+            :extra_classes => 'btn--primary info__button',
+            :extra_attributes => '',
+            :type => "link",
+            :text => 'en savoir plus',
+            :link => '#',
+          }) %>
+        </div>
       </div>
     </div>
   </div>

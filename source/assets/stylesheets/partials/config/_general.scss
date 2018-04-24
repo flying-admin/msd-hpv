@@ -140,8 +140,17 @@ body.no-scroll {
     margin-top: 36px;
   }
 
-  @include media('<tablet'){
+  @include media('<tablet') {
     font-size: 20px;
     line-height: 35px;
+  }
+}
+
+@include media('<phablet') {
+  .pad-xs-0-5 {
+    padding: 0 5px;
+  }
+  .pad-xs-0-15 {
+    padding: 0 15px;
   }
 }
