@@ -24,6 +24,7 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-caret-down:before,
 .icon-scroll:before {
   display: inline-block;
   font-family: "msd-hpv-icons";
@@ -39,6 +40,8 @@
   font-smoothing: antialiased;
 }
 
+.icon-caret-down:before { content: "\f101"; }
 .icon-scroll:before { content: "\f100"; }
 
+$font-msd-hpv-icons-caret-down: "\f101";
 $font-msd-hpv-icons-scroll: "\f100";

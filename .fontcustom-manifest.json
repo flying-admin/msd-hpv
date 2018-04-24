@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "a32b1cac0210422d9edc95845ef63aa3e2ad6396b52c487e595a77ea14089425",
-    "current": "a32b1cac0210422d9edc95845ef63aa3e2ad6396b52c487e595a77ea14089425"
+    "previous": "d9e4001945c898b683307b0494844af275386f26426b1665b751c4480e6047a1",
+    "current": "d9e4001945c898b683307b0494844af275386f26426b1665b751c4480e6047a1"
   },
   "fonts": [
     "./source/assets/fonts/msd-hpv-icons.ttf",
@@ -11,6 +11,10 @@
     "./source/assets/fonts/msd-hpv-icons.woff2"
   ],
   "glyphs": {
+    "caret-down": {
+      "codepoint": 61697,
+      "source": "./source/assets/images/icons/caret-down.svg"
+    },
     "scroll": {
       "codepoint": 61696,
       "source": "./source/assets/images/icons/scroll.svg"
