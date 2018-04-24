@@ -1,0 +1,51 @@
+{
+  "checksum": {
+    "previous": "a32b1cac0210422d9edc95845ef63aa3e2ad6396b52c487e595a77ea14089425",
+    "current": "a32b1cac0210422d9edc95845ef63aa3e2ad6396b52c487e595a77ea14089425"
+  },
+  "fonts": [
+    "./source/assets/fonts/msd-hpv-icons.ttf",
+    "./source/assets/fonts/msd-hpv-icons.svg",
+    "./source/assets/fonts/msd-hpv-icons.woff",
+    "./source/assets/fonts/msd-hpv-icons.eot",
+    "./source/assets/fonts/msd-hpv-icons.woff2"
+  ],
+  "glyphs": {
+    "scroll": {
+      "codepoint": 61696,
+      "source": "./source/assets/images/icons/scroll.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "msd-hpv-icons",
+    "force": false,
+    "input": {
+      "templates": "./source/assets/images/icons",
+      "vectors": "./source/assets/images/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "./source/assets/stylesheets/partials/config",
+      "fonts": "./source/assets/fonts",
+      "preview": "./source/assets/fonts"
+    },
+    "preprocessor_path": "./../fonts/",
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "./source/assets/stylesheets/partials/config/_msd-hpv-icons.scss"
+  ]
+}

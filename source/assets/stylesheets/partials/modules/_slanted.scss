@@ -45,28 +45,36 @@
   }
 
   &--right {
-    &.slanted--overflow {}
+    &::before {
+      transform-origin: 0% 0%;
+      transform: skewY(5.7deg);
+    }
 
     &.slanted--no-overflow {
       clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
     }
 
-    &::before {
-      transform-origin: 0% 0%;
-      transform: skewY(5.7deg);
+    &.slanted--overflow {}
+
+    .slanted__content {
+      margin: -2.5vw 0 0;
     }
   }
 
   &--left {
-    &.slanted--overflow {}
+    &::before {
+      transform-origin: 100% 0%;
+      transform: skewY(-5.7deg);
+    }
 
     &.slanted--no-overflow {
       clip-path: polygon(0 10vw, 100% 0, 100% calc(100% - 10vw), 0 100%);
     }
 
-    &::before {
-      transform-origin: 100% 0%;
-      transform: skewY(-5.7deg);
+    &.slanted--overflow {}
+
+    .slanted__content {
+      margin: -10vw 0 0;
     }
   }
 
@@ -100,7 +108,6 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin: -5vw 0 0;
     padding: 5vw 0;
 
     @include media('<phablet'){
@@ -109,21 +116,10 @@
     }
 
     &__title {
-      font-family: $font_title;
-      font-weight: 800;
-      font-size: 30px;
-      line-height: 38px;
-      color: $white;
-      letter-spacing: 0;
       margin: 0 0 35px;
     }
 
     &__text {
-      font-family: $font_default;
-      font-size: 16px;
-      line-height: 30px;
-      color: $white;
-      letter-spacing: 0;
       margin: 0 0 30px;
     }
   }

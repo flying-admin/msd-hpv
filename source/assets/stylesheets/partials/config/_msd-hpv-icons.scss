@@ -1,0 +1,44 @@
+//
+// Icon Font: msd-hpv-icons
+//
+
+@font-face {
+  font-family: "msd-hpv-icons";
+  src: url("./../fonts/msd-hpv-icons.eot");
+  src: url("./../fonts/msd-hpv-icons.eot?#iefix") format("embedded-opentype"),
+       url("./../fonts/msd-hpv-icons.woff2") format("woff2"),
+       url("./../fonts/msd-hpv-icons.woff") format("woff"),
+       url("./../fonts/msd-hpv-icons.ttf") format("truetype"),
+       url("./../fonts/msd-hpv-icons.svg#msd-hpv-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "msd-hpv-icons";
+    src: url("./../fonts/msd-hpv-icons.svg#msd-hpv-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-scroll:before {
+  display: inline-block;
+  font-family: "msd-hpv-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-scroll:before { content: "\f100"; }
+
+$font-msd-hpv-icons-scroll: "\f100";

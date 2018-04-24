@@ -27,28 +27,17 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 15vw 0;
+    padding: 10vw 0;
 
     @include media('<phablet'){
       padding: 20vw 15px 50px;
     }
 
     &__title {
-      font-family: $font_title;
-      font-weight: 800;
-      font-size: 30px;
-      line-height: 38px;
-      color: $blackish;
-      letter-spacing: 0;
       margin: 0 0 35px;
     }
 
     &__text {
-      font-family: $font_default;
-      font-size: 16px;
-      line-height: 30px;
-      color: $darkgrey;
-      letter-spacing: 0;
       margin: 0 0 30px;
     }
   }

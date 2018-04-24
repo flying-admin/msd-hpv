@@ -39,6 +39,12 @@
 
   &--large {
     padding: 20px 35px;
+    border-radius: 35px;
+
+    @include media('<tablet'){
+      padding: 10px 25px;
+      border-radius: 25px;
+    }
   }
 
   &--primary {

@@ -1,0 +1,121 @@
+.intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 10vw;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    transform-origin: 0% 0%;
+    transform: skewY(5.7deg);
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    @include media('<tablet'){
+      min-height: 600px;
+
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -2000px;
+        right: -2000px;
+        margin: 0 auto;
+        width: auto;
+        max-width: none;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__caption {
+    display: block;
+    position: absolute;
+    top: 30vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-65%);
+    text-align: center;
+
+    @include media('<tablet'){
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__title {
+      display: block;
+      font-family: $font_title;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 70px;
+      color: $white;
+      text-align: center;
+      margin: 0 0 36px;
+
+      @include media('<tablet'){
+        font-size: 36px;
+        line-height: 46px;
+        margin: 0 0 20px;
+      }
+    }
+
+    &__text {
+      font-size: 25px;
+      line-height: 40px;
+      color: $white;
+      text-align: center;
+      margin: 0 0 36px;
+
+      @include media('<tablet'){
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0 0 20px;
+      }
+    }
+
+    &__button {
+
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 52px;
+    color: $white;
+
+    @include media('<tablet'){
+      display: none;
+    }
+    @include media('>desktop'){
+      bottom: 120px;
+    }
+  }
+
+  &__social {
+    position: absolute;
+  }
+}

@@ -1,0 +1,41 @@
+<%
+  extra_classes ||= ""
+  image ||= ""
+  title ||= ""
+  text ||= ""
+  button ||= ""
+%>
+
+<div class="intro <%= extra_classes %>">
+  <div class="intro__image">
+    <img src="<%= image %>" alt="">
+  </div>
+  <div class="intro__caption">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="intro__caption__title"><%= title %></p>
+          <p class="intro__caption__text"><%= text %></p>
+          <%= partial("modules/button", :locals => {
+            :extra_classes => 'btn--large intro__caption__button',
+            :extra_attributes => '',
+            :type => "link",
+            :text => button[:text],
+            :link => button[:link],
+          }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="intro__scroll">
+    <span class="icon-scroll"></span>
+  </a>
+  <div class="intro__social">
+    <ul>
+      <li><a href="">twitter</a></li>
+      <li><a href="">facebook</a></li>
+      <li><a href="">linkedin</a></li>
+      <li><a href="">google plus</a></li>
+    </ul>
+  </div>
+</div>

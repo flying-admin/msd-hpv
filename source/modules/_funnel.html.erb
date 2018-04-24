@@ -13,8 +13,8 @@
     <div class="row between-xs middle-xs <% if(reverse == 'true') %> reverse <% end %>">
       <div class="col-md-5 col-sm-6 col-xs-12">
         <div class="funnel__content">
-          <p class="funnel__content__title"><%= title %></p>
-          <p class="funnel__content__text"><%= text %></p>
+          <p class="funnel__content__title title"><%= title %></p>
+          <p class="funnel__content__text text"><%= text %></p>
           <%= partial("modules/button", :locals => {
             :extra_classes => 'btn--primary funnel__content__button',
             :extra_attributes => '',

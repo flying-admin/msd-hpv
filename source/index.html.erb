@@ -3,16 +3,50 @@ title: Proyect Index
 layout: layout
 ---
 <%= partial("shared/header", :locals => {
-  :extra_classes => 'header--prueba-visible'
+  :extra_classes => ''
 }) %>
 
 <div class="content__wrapper">
 
-  <br><br><br><br><br>
-  <br><br><br><br><br>
-  <br><br><br><br><br>
-  <br><br><br><br><br>
-  <br><br><br><br><br>
+  <%= partial("modules/intro", :locals => {
+    :extra_classes => '',
+    :image => 'http://placehold.it/1440x880',
+    :title => 'Comment se protéger contre le<br />PAPILLOMAVIRUS?',
+    :text => 'Découvrez tout ce qu\'il faut savoir sur la<br />prévention et le dépistage.',
+    :button => {
+      :text => 'Comment les parents peuvent-ils agir?',
+      :link => '#'
+    }
+  }) %>
+
+  <br /><br /><br /><br /><br /><br />
+  <div class="container">
+    <div class="row middle-xs">
+      <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-12">
+        <img src="http://placehold.it/300x120" alt="">
+        <br /><br />
+        <p class="text text--tag text--center">de la population sexuellement active est un jour confrontée à une infection par l'HPV, dont la moitié entre 15 et 24 ans.</p>
+      </div>
+      <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-12">
+        <p class="title">Qu'est-ce que le PAPILLOMAVIRUS?</p>
+        <p class="text">
+          Les Papillomavirus humains (HPV) sont une famille de virus qui ont pour spécificité d’infecter la peau et les muqueuses.<br /><br />
+          Il existe plus de 200 types d’HPV : ils peuvent toucher les organes génitaux internes et externes, la région anale, certaines parties de la peau ou encore la bouche, chez les femmes comme chez les hommes. On compte environ 20.000 nouveaux cas de verrues génitales et cancers liés a l'HPV par an en Belgique.
+        </p>
+        <br /><br />
+        <%= partial("modules/button", :locals => {
+          :extra_classes => 'btn--primary info__button',
+          :extra_attributes => '',
+          :type => "link",
+          :text => 'en savoir plus',
+          :link => '#',
+        }) %>
+      </div>
+    </div>
+  </div>
+
+  <br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br />
 
   <%= partial("modules/slanted", :locals => {
     :extra_classes => 'slanted--green',
