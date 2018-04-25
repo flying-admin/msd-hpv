@@ -198,4 +198,21 @@
       }
     }
   }
+
+  &--home {
+    .intro__caption {
+      transform: translateY(0);
+      top: auto;
+      bottom: 180px;
+      @include media('>desktop') {
+        bottom: 265px;
+      }
+      @include media('<mobile') {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+      }
+    }
+  }
+
 }

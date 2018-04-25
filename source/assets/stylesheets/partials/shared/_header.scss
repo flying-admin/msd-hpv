@@ -42,6 +42,13 @@
     }
     &__logo {
       height: 52px;
+      @include media("<desktop") {
+        padding-left: 20px;
+      }
+      @include media("<phablet") {
+        padding-left: 0;
+        padding-right: 20px;
+      }
       &__logo {
         height: 100%;
         width: auto;

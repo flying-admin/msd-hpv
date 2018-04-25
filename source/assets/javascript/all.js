@@ -17,10 +17,10 @@ $(window).on("load", function(){
       $('.footer__title').on('click', function(ev) {
         if ( $(this).is('.open') ) {
           $(this).removeClass('open');
-          $(this).parent().find('.footer__nav').slideUp();
+          $(this).parent().find('.footer__nav').slideUp(700);
         } else {
           $(this).addClass('open');
-          $(this).parent().find('.footer__nav').slideDown();
+          $(this).parent().find('.footer__nav').slideDown(700);
         }
 
       });
@@ -41,10 +41,10 @@ $(window).on("resize", function(){
       $('.footer__title').on('click', function(ev) {
         if ( $(this).is('.open') ) {
           $(this).removeClass('open');
-          $(this).parent().find('.footer__nav').slideUp();
+          $(this).parent().find('.footer__nav').slideUp(700);
         } else {
           $(this).addClass('open');
-          $(this).parent().find('.footer__nav').slideDown();
+          $(this).parent().find('.footer__nav').slideDown(700);
         }
 
       });

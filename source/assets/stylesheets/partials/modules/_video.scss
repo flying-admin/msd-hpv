@@ -6,6 +6,9 @@
   @include media('<phablet') {
     padding: 10vw 0;
   }
+  @include media('<mobile') {
+    padding: 12vw 0 80px 0;
+  }
 
   iframe {
     display: block;

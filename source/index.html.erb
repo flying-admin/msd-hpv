@@ -9,7 +9,7 @@ layout: layout
 <div class="content__wrapper">
 
   <%= partial("modules/intro", :locals => {
-    :extra_classes => '',
+    :extra_classes => 'intro--home',
     :image => '/assets/images/content/home/intro.jpg',
     :title => 'Comment se protéger contre le<br />PAPILLOMAVIRUS?',
     :text => 'Découvrez tout ce qu\'il faut savoir sur la<br />prévention et le dépistage.',
@@ -25,7 +25,7 @@ layout: layout
     <div class="container">
       <div class="row middle-xs">
         <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12 hide-on-mobile">
-          <img src="/assets/images/content/home/percentage.jpg" alt="">
+          <img src="/assets/images/content/home/percentage.jpg" alt="" class="no-width">
           <br /><br />
           <p class="text text--primary text--tag text--center">de la population sexuellement active est un jour confrontée à une infection par l'HPV, dont la moitié entre 15 et 24 ans.</p>
         </div>
@@ -77,8 +77,9 @@ layout: layout
     :extra_classes => '',
     :reverse => 'false',
     :image => 'http://placehold.it/700x860',
-    :title => 'Comment se protéger sachant que 4 personnes sur 5 sont infectées par le HPV?',
-    :text => '<p>Le virus HPV se transmet par contact avec une peau infectée. Concrètement, cela signifie qu\'une contamination peut avoir lieu même s\'il n\'y a pas pénétration.</p>',
+
+    :title => 'Quelles sont les conséquences pour les hommes et les femmes?',
+    :text => '<p>Les risques liés à une infection par l’HPV varient selon le type d’HPV. Certaines infections à l’HPV se développent lentement et n’entraînent aucun symptôme visible.</p><p>Une infection du papillomavirus peut avoir des conséquences graves. 1 personne sur 10 n\'arrive pas a éliminer l\'infection naturellement: le virus reste donc dans l\'organisme. Parmi les conséquences, le virus peut générer des verrues génitales ou des lésions précancéreuses, voire des cancers.</p>',
     :button => {
       :text => 'En savoir plus',
       :link => '#'

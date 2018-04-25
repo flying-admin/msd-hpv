@@ -9,6 +9,10 @@ button {
 img {
   width: 100%;
   height: auto;
+  &.no-width {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .body-wrapper {
