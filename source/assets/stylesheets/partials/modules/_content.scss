@@ -1,9 +1,22 @@
 .content {
+  padding: 10vw 0;
+
+  &--extra-padding-top {
+    padding-top: 15vw;
+  }
+  &--extra-padding-bottom {
+    padding-bottom: 15vw;
+  }
+
   &__image {
     margin-bottom: 53px;
   }
-  .text {
-    color: $darkgrey;
+
+  &__text {
     margin-bottom: 74px;
+  }
+
+  p + p {
+    margin-top: 10px;
   }
 }

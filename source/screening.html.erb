@@ -14,20 +14,16 @@ layout: layout
     :title => 'Comment dépister l’HPV ?',
   }) %>
 
-  <br /><br /><br />
-  <div class="content">
+  <div class="content content--extra-padding-bottom">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
-          <div class="text ">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+          <div class="content__text text">
             <p>Afin de dépister une infection par l’HPV, chez l’homme et chez la femme, il existe des tests qui consistent à rechercher l’ADN des virus HPV. Néanmoins, lorsque ce type de test est positif, cela ne signifie pas qu’on est affecté d’une lésion précancéreuse ou d’un cancer ! Cela signifie simplement que le virus est présent et qu’on peut le transmettre à nos partenaires sexuels.</p>
           </div>
         </div>
       </div>
     </div>
-    <br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
   </div>
 
   <%= partial("modules/slanted", :locals => {
@@ -37,18 +33,10 @@ layout: layout
     :direction => 'right',
     :reverse => 'false',
     :image => 'http://placehold.it/400x500',
-    :title => '',
-    :text => '<p>En Belgique, on recommande à toutes les femmes de 25 à 65 ans d’effectuer un frottis de dépistage. Ce frottis standard est remboursé à raison d’une fois tous les 3 ans.</p>',
-    :button => {
-      :text => '',
-      :link => '#'
-    }
+    :title => '<span class="title--lightweight">En Belgique, on recommande à toutes les femmes de 25 à 65 ans d’effectuer un frottis de dépistage. Ce frottis standard est remboursé à raison d’une fois tous les 3 ans.</span>',
   }) %>
 
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-  <div class="content">
+  <div class="content content--extra-padding-top content--extra-padding-bottom">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-md-offset-4 col-xs-12">
@@ -57,8 +45,10 @@ layout: layout
       </div>
       <div class="row">
         <div class="col-md-8 col-md-offset-2 col-xs-12">
-          <div class="text">
-            <p>+/- 99% des cancers du col de l’utérus sont causés par une infection à l’HPV. Le risque de cancer du col de l’utérus peut être dépisté par un frottis. À l’aide d’une spatule ou d’une petite brosse spécialement adaptée, le médecin va recueillir des cellules provenant de la muqueuse vaginale et du col de l’utérus. Les prélèvements sont ensuite adressés à un laboratoire où ils sont analysés. Le dépistage par frottis reste important et peut garantir que 60% des décès causés par le cancer du col de l’utérus sont évités.</p>
+          <div class="content__text text">
+            <p>
+              +/- 99% des cancers du col de l’utérus sont causés par une infection à l’HPV. Le risque de cancer du col de l’utérus peut être dépisté par un frottis. À l’aide d’une spatule ou d’une petite brosse spécialement adaptée, le médecin va recueillir des cellules provenant de la muqueuse vaginale et du col de l’utérus. Les prélèvements sont ensuite adressés à un laboratoire où ils sont analysés. Le dépistage par frottis reste important et peut garantir que 60% des décès causés par le cancer du col de l’utérus sont évités.
+            </p>
           </div>
         </div>
       </div>
@@ -71,10 +61,6 @@ layout: layout
       </div>
     </div>
   </div>
-
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
 
   <%#= partial("modules/slanted", :locals => {
     :extra_classes => 'slanted--green',

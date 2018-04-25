@@ -105,6 +105,10 @@ body.no-scroll {
     text-align: center;
   }
 
+  &--lightweight {
+    font-weight: 600;
+  }
+
   @include media('<tablet'){
     line-height: 45px;
   }
@@ -121,11 +125,18 @@ body.no-scroll {
     color: $white;
   }
 
+  &--dark {
+    color: $blackish;
+  }
+
+  &--primary {
+    color: $primary;
+  }
+
   &--tag {
     font-family: $font_title;
     font-weight: 600;
     line-height: 26px;
-    color: $primary;
   }
 
   &--center {
