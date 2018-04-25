@@ -163,4 +163,12 @@
       }
     }
   }
+
+  &--simplified {
+    .intro__caption {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+  }
 }

@@ -4,6 +4,8 @@
   title ||= ""
   text ||= ""
   button ||= ""
+  scroll ||= "false"
+  social ||= "false"
 %>
 
 <div class="intro <%= extra_classes %>">
@@ -15,27 +17,35 @@
       <div class="row">
         <div class="col-xs-12">
           <p class="intro__caption__title"><%= title %></p>
-          <p class="intro__caption__text"><%= text %></p>
-          <%= partial("modules/button", :locals => {
-            :extra_classes => 'btn--large intro__caption__button',
-            :extra_attributes => '',
-            :type => "link",
-            :text => button[:text],
-            :link => button[:link],
-          }) %>
+          <% if text.present? %>
+            <p class="intro__caption__text"><%= text %></p>
+          <% end %>
+          <% if button.present? %>
+            <%= partial("modules/button", :locals => {
+              :extra_classes => 'btn--large intro__caption__button',
+              :extra_attributes => '',
+              :type => "link",
+              :text => button[:text],
+              :link => button[:link],
+            }) %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
-  <a class="intro__scroll">
-    <span class="icon-scroll"></span>
-  </a>
-  <div class="intro__social">
-    <ul>
-      <li><a href=""><span class="icon-twitter"></span></a></li>
-      <li><a href=""><span class="icon-facebook"></span></a></li>
-      <li><a href=""><span class="icon-linkedin"></span></a></li>
-      <li><a href=""><span class="icon-gplus"></span></a></li>
-    </ul>
-  </div>
+  <% if scroll == "true" %>
+    <a class="intro__scroll">
+      <span class="icon-scroll"></span>
+    </a>
+  <% end %>
+  <% if social == "true" %>
+    <div class="intro__social">
+      <ul>
+        <li><a href=""><span class="icon-twitter"></span></a></li>
+        <li><a href=""><span class="icon-facebook"></span></a></li>
+        <li><a href=""><span class="icon-linkedin"></span></a></li>
+        <li><a href=""><span class="icon-gplus"></span></a></li>
+      </ul>
+    </div>
+  <% end %>
 </div>
