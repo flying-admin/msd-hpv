@@ -16,7 +16,31 @@
     margin-bottom: 74px;
   }
 
+  ul {
+    display: block;
+    position: relative;
+
+    li {
+      display: block;
+
+      & + li {
+        margin-top: 10px;
+      }
+
+      p {
+        &::before {
+          content: '\2022';
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
   p + p {
     margin-top: 10px;
+  }
+
+  p + ul {
+    margin-top: 20px;
   }
 }

@@ -3,6 +3,7 @@
   overflow ||= 'true'
   contains ||= 'false'
   direction ||= 'right'
+  single ||= 'false'
   reverse ||= 'false'
   image ||= ''
   title ||= ''
@@ -11,14 +12,18 @@
 %>
 
 <div class="slanted <%= extra_classes %>
-  <% if(overflow == 'true') %> slanted--overflow <% else %> slanted--no-overflow <% end %>
-  <% if(contains == 'true') %> slanted--contains <% else %> slanted--no-contains <% end %>
-  <% if(direction == 'left') %> slanted--left <% else %> slanted--right <% end %>
-  <% if(reverse == 'true') %> slanted--reversed <% end %>">
+  <% if overflow == 'true' %> slanted--overflow <% else %> slanted--no-overflow <% end %>
+  <% if contains == 'true' %> slanted--contains <% else %> slanted--no-contains <% end %>
+  <% if direction == 'left' %> slanted--left <% else %> slanted--right <% end %>
+  <% if reverse == 'true' %> slanted--reversed <% end %>
+  <% if single == 'true' %> slanted--single <% end %>">
   <div class="container">
+    <% if single == 'false' %>
     <div class="row between-xs middle-xs <% if(reverse == 'true') %> reverse <% end %>">
       <div class="col-md-5 col-sm-6 col-xs-12">
-        <img src="<%= image %>" alt="" class="slanted__image">
+        <% if image.present? %>
+          <img src="<%= image %>" alt="" class="slanted__image">
+        <% end %>
       </div>
       <div class="col-md-5 col-sm-6 col-xs-12">
         <div class="slanted__content">
@@ -40,5 +45,54 @@
         </div>
       </div>
     </div>
+    <% else %>
+      <div class="row center-xs">
+        <div class="col-md-8 col-sm-10 col-xs-12">
+          <% if reverse == 'false' %>
+            <% if image.present? %>
+              <img src="<%= image %>" alt="" class="slanted__image">
+            <% end %>
+            <div class="slanted__content">
+              <% if title.present? %>
+                <p class="slanted__content__title title title--light"><%= title %></p>
+              <% end %>
+              <% if text.present? %>
+                <div class="slanted__content__text text text--light"><%= text %></div>
+              <% end %>
+              <% if button.present? %>
+                <%= partial("modules/button", :locals => {
+                  :extra_classes => 'slanted__content__button',
+                  :extra_attributes => '',
+                  :type => "link",
+                  :text => button[:text],
+                  :link => button[:link],
+                }) %>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="slanted__content">
+              <% if title.present? %>
+                <p class="slanted__content__title title title--light"><%= title %></p>
+              <% end %>
+              <% if text.present? %>
+                <div class="slanted__content__text text text--light"><%= text %></div>
+              <% end %>
+              <% if button.present? %>
+                <%= partial("modules/button", :locals => {
+                  :extra_classes => 'slanted__content__button',
+                  :extra_attributes => '',
+                  :type => "link",
+                  :text => button[:text],
+                  :link => button[:link],
+                }) %>
+              <% end %>
+            </div>
+            <% if image.present? %>
+              <img src="<%= image %>" alt="" class="slanted__image">
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

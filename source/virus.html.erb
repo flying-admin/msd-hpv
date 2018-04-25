@@ -11,7 +11,7 @@ layout: layout
   <%= partial("modules/intro", :locals => {
     :extra_classes => 'intro--simplified',
     :image => 'http://placehold.it/1440x484',
-    :title => 'Comment se protéger contre le<br />PAPILLOMAVIRUS?',
+    :title => 'Qu’est-ce que l’HPV?',
   }) %>
 
   <div class="content">
@@ -55,70 +55,92 @@ layout: layout
     :extra_classes => 'slanted--green',
     :overflow => 'false',
     :contains => 'true',
-    :direction => 'right',
-    :reverse => 'false',
-    :image => 'http://placehold.it/400x500',
-    :title => 'Comment se faire dépister?',
-    :text => '<p>Afin de dépister une infection par l’HPV, chez l’homme et chez la femme, il existe des tests qui consistent à rechercher l’ADN des virus HPV. Néanmoins, lorsque ce type de test est positif, cela ne signifi e pas qu’on est affecté d’une lésion précancéreuse</p><p>Ou d’un cancer!</p>',
-    :button => {
-      :text => 'En savoir plus',
-      :link => '#'
-    }
-  }) %>
-
-  <%= partial("modules/funnel", :locals => {
-    :extra_classes => '',
-    :reverse => 'false',
-    :image => 'http://placehold.it/700x860',
-    :title => 'Quelles sont les conséquences pour les hommes et les femmes?',
-    :text => '<p>Les risques liés à une infection par l’HPV varient selon le type d’HPV. Certaines infections à l’HPV se développent lentement et n’entraînent aucun symptôme visible.</p><p>Une infection du papillomavirus peut avoir des conséquences graves. 1 personne sur 10 n\'arrive pas a éliminer l\'infection naturellement: le virus reste donc dans l\'organisme. Parmi les conséquences, le virus peut générer des verrues génitales ou des lésions précancéreuses, voire des cancers.<p>',
-    :button => {
-      :text => 'En savoir plus',
-      :link => '#'
-    }
-  }) %>
-
-  <%= partial("modules/slanted", :locals => {
-    :extra_classes => 'slanted--purple',
-    :overflow => 'false',
-    :contains => 'false',
     :direction => 'left',
-    :reverse => 'false',
-    :image => 'http://placehold.it/400x500',
-    :title => 'Comment se protéger sachant que 4 personnes sur 5 sont infectées par le HPV?',
-    :text => '<p>Le virus HPV se transmet par contact avec une peau infectée. Concrètement, cela signifie qu\'une contamination peut avoir lieu même s\'il n\'y a pas pénétration.</p>',
-    :button => {
-      :text => 'En savoir plus',
-      :link => '#'
-    }
+    :reverse => 'true',
+    :single => 'true',
+    :title => '<span class="title--lightweight">Parfois, le virus reste présent dans le corps sans manifester le moindre signe ou symptôme</span>',
   }) %>
 
-  <%= partial("modules/funnel", :locals => {
-    :extra_classes => '',
-    :reverse => 'false',
-    :image => 'http://placehold.it/700x860',
-    :title => 'Se faire vacciner, comment faire?',
-    :text => '<p>Vaccination ANTI-PAPILLOMAVIRUS : Une vaccination recommandée par les autorités de santé en fédération Wallonie-Bruxelles.</p>',
-    :button => {
-      :text => 'En savoir plus',
-      :link => '#'
-    }
-  }) %>
-
-  <%= partial("modules/slanted", :locals => {
-    :extra_classes => 'slanted--green',
-    :overflow => 'true',
-    :contains => 'false',
-    :direction => 'right',
-    :reverse => 'false',
-    :image => 'http://placehold.it/400x500',
-    :title => 'Agir en tant que parent?',
-    :text => '<p>Si vos enfants n’ont pas été vaccinés par la médecine scolaire, il est important d’évoquer la vaccination avec eux et avec votre médecin. Protéger vos enfants et parlez-en dès aujourd\'hui. Ils méritent votre soutient face aux risques venant du papillomavirus.</p>',
-    :button => {
-      :text => 'En savoir plus',
-      :link => '#'
-    }
-  }) %>
+  <div class="content content--extra-padding-top content--extra-padding-bottom">
+    <div class="container">
+      <div class="row center-xs">
+        <div class="col-md-5 col-sm-8 col-xs-11">
+          <div class="content__text text text--dark text--tag">
+            <p>
+              La transmission des papillomavirus humains (HPV) existe dans le monde entier.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row center-xs">
+        <div class="col-md-4 col-sm-6 col-xs-10">
+          <img src="http://placehold.it/300x120" alt="" class="content__image">
+        </div>
+      </div>
+      <div class="row center-xs">
+        <div class="col-md-6 col-sm-9 col-xs-12">
+          <div class="content__text text text--dark text--tag">
+            <p>
+              De la population sexuellement active est un jour confrontée à une infection par l'HPV, dont la moitié entre 15 et 24 ans.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+          <div class="content__text text">
+            <p>
+              Il s’agit d’une infection invisible qui, dans la plupart des cas, passe inaperçue et il n’existe pas de moyen simple pour savoir si quelqu’un est infecté par l’HPV.
+            </p>
+            <p>
+              Près de 90% des personnes contaminées vont éliminer le virus spontanément après 2 à 3 ans grâce à leur immunité naturelle.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="content__text text">
+            <p class="title title--sub">QU’EST-CE QUI PEUT AUGMENTER LE RISQUE<br/>D’INFECTION À L’HPV?</p>
+            <ul>
+              <li>
+                <p>Une activité sexuelle à un âge précoce</p>
+              </li>
+              <li>
+                <p>Des partenaires multiples</p>
+              </li>
+              <li>
+                <p>D’autres maladies sexuellement transmissibles (MST)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="content__text text">
+            <p class="title title--sub">COMMENT EST-ON INFECTÉ PAR LE VIRUS HPV ?</p>
+            <ul>
+              <li>
+                <p>Par contact sexuel avec une muqueuse infectée (génital, oral ou anal)</p>
+              </li>
+              <li>
+                <p>Par contact cutané</p>
+              </li>
+              <li>
+                <p>Via des surfaces infectées</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="alert alert--success">
+            <p>Et peut dès lors être transmis sans le savoir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 <%= partial("shared/footer", :locals => {

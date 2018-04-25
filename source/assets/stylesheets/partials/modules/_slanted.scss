@@ -90,6 +90,18 @@
     }
   }
 
+  &--single {
+    .slanted__content {
+      padding-top: 56px;
+      margin: 0;
+
+      &--reverse {
+        padding-top: 0;
+        padding-bottom: 56px;
+      }
+    }
+  }
+
 
   &__image {
     display: block;
