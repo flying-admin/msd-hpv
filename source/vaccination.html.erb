@@ -1,0 +1,113 @@
+---
+title: Proyect Index
+layout: layout
+---
+<%= partial("shared/header", :locals => {
+  :extra_classes => ''
+}) %>
+
+<div class="content__wrapper">
+
+  <%= partial("modules/intro", :locals => {
+    :extra_classes => 'intro--simplified',
+    :image => 'http://placehold.it/1440x484',
+    :title => 'Je veux me faire vacciner,<br />comment faire?',
+  }) %>
+
+  <div class="content content--reduced-padding-top">
+    <div class="container">
+      <div class="row between-sm">
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <div class="row center-xs">
+            <div class="col-xs-7">
+              <img src="/assets/images/content/vaccination/content1.jpg" alt="" class="content__image">
+            </div>
+          </div>
+          <div class="content__text">
+            <p class="text">
+              En Fédération Wallonie-Bruxelles, il existe 3 manières de se faire vacciner :
+            </p>
+            <p class="text">
+              &bull;&nbsp;&nbsp;Gratuitement à l’école, en 2ème secondaire
+            </p>
+            <p class="text">
+              &bull;&nbsp;&nbsp;Chez son médecin, et partiellement remboursé (11.90 €/injection) pour les filles de 12 à 18 ans. La consultation médicale est également remboursée en partie.
+            </p>
+            <p class="text">
+              &bull;&nbsp;&nbsp;À partir de 19 ans, on peut se faire vacciner mais sans remboursement. Cela coûte pour un vaccin 2- valent 68.93 €, 4-valent 118.25 € et 9-valent 134.52 € par injection.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <div class="row center-xs">
+            <div class="col-xs-7">
+              <img src="/assets/images/content/vaccination/content2.jpg" alt="" class="content__image">
+            </div>
+          </div>
+          <div class="content__text">
+            <p class="text">
+              Certains cancers et verrues génitales liés à l’HPV touchent aussi les garçons. Les nouvelles recommandations du Conseil Supérieur de la Santé insistent sur la nécessité de les vacciner aussi.
+            <p class="text">
+              En Belgique, les garçons peuvent se faire vacciner mais il n’y a pas de remboursement prévu. Cela coûte pour un vaccin 2-valent 68.93 €, 4-valent 118.25 € et 9- valent 134.52 € par injection.            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= partial("modules/slanted", :locals => {
+    :extra_classes => 'slanted--green',
+    :overflow => 'false',
+    :contains => 'true',
+    :direction => 'left',
+    :reverse => 'true',
+    :single => 'true',
+    :title => '<span class="title--lightweight">Une infection HPV peut avoir des Certaines mutuelles proposent une indemnisation annuelle pour la vaccination. Renseignez-vous!</span>',
+  }) %>
+
+  <div class="content content--extra-padding-top content--reduced-padding-bottom">
+    <div class="container">
+      <div class="row center-xs">
+        <div class="col-md-8 col-sm-10 col-xs-12">
+          <div class="content__text title title--sub title--lightweight">
+            <p>
+              Il existe actuellement 3 vaccins qui se différencient par leur « valence », c’est-à-dire le nombre de types différents d’HPV contre lesquels ils protègent
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <img src="/assets/images/content/vaccination/content3.jpg" alt="" class="content__image">
+        </div>
+      </div>
+      <div class="row center-sm">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="/assets/images/content/vaccination/content4.jpg" alt="" class="content__image">
+        </div>
+        <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-12">
+          <div class="content__text">
+            <p class="text text--left">
+              Ces vaccins contre l’HPV sont administrés en 2 ou 3 injections dans la partie supérieure du bras. Les vaccins 4-valent et                9-valent protègent jusqu’à 90% contre les verrues génitales.
+            </p>
+            <p class="text text--left">
+              La vaccination contre l’HPV est généralement bien tolorérée, seuls une légère douleur et une irritation au site d’injection et des maux de tête durant quelques jours sont parfois rapportés. Il convient néanmoins de lire la notice du vaccin choisi pour toute éventuelle contre-indication ou effet indésirable.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="alert alert--success">
+            <p>Consultez votre médecin ou votre pharmacien pour en savoir plus sur l’HpV et la vaccination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%= partial("shared/footer", :locals => {
+  :extra_classes => ''
+}) %>
