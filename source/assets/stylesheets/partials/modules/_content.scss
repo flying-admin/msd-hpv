@@ -7,13 +7,19 @@
   &--extra-padding-bottom {
     padding-bottom: 15vw;
   }
+  &--reduced-padding-top {
+    padding-top: 56px;
+  }
+  &--reduced-padding-bottom {
+    padding-bottom: 56px;
+  }
 
   &__image {
-    margin-bottom: 53px;
+    margin-bottom: 56px;
   }
 
   &__text {
-    margin-bottom: 74px;
+    margin-bottom: 72px;
   }
 
   ul {
@@ -28,8 +34,13 @@
       }
 
       p {
+        position: relative;
+        padding-left: 25px;
+
         &::before {
           content: '\2022';
+          position: absolute;
+          left: 0;
           padding: 0 10px;
         }
       }
