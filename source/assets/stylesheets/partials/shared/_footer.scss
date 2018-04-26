@@ -1,11 +1,19 @@
 .footer {
   background-color: $lightgrey;
-  padding: 375px 0 80px 0;
-  margin-top: -168px;
+  padding: 135px 0 80px 0;
+
   @include media("<phablet") {
-    padding: 112px 5px 34px 5px;
-    margin-top: -89px;
+    padding: 52px 5px 34px 5px;
   }
+
+  &--overlap {
+    padding: calc(10vw + 200px) 0 80px 0;
+
+    @include media("<phablet") {
+      padding: calc(10vw + 50px) 5px 34px 5px;
+    }
+  }
+
   &__logo {
     display: block;
     height: 53px;

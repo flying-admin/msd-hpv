@@ -101,6 +101,12 @@ body.no-scroll {
   line-height: 38px;
   color: $blackish;
 
+  &--sub {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--light {
     color: $white;
   }
@@ -111,12 +117,6 @@ body.no-scroll {
 
   &--lightweight {
     font-weight: 600;
-  }
-
-  &--sub {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
   }
 
   @include media('<tablet'){
