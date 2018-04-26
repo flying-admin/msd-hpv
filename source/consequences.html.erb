@@ -1,0 +1,53 @@
+---
+title: Proyect Index
+layout: layout
+---
+<%= partial("shared/header", :locals => {
+  :extra_classes => ''
+}) %>
+
+<div class="content__wrapper">
+
+  <%= partial("modules/intro", :locals => {
+    :extra_classes => 'intro--simplified',
+    :image => 'http://placehold.it/1440x484',
+    :title => 'Quelles sont<br />les conséquences possibles?',
+  }) %>
+
+  <%= partial("modules/slanted", :locals => {
+    :extra_classes => 'slanted--green',
+    :overflow => 'false',
+    :contains => 'true',
+    :direction => 'right',
+    :reverse => 'true',
+    :single => 'true',
+    :title => '<span class="title--lightweight">Les risques liés à une infection par l’HPV varient selon le type d’HPV.</span>',
+    :text => '<p>Certaines infections à l’HPV se développent lentement et n’entraînent aucun symptôme visible. Ils peuvent rester dans l’organisme de manière dormante, ou disparaître spontanément.</p><p>Certains génèrent des symptômes bénins, comme des verrues génitales alors que d’autres peuvent entraîner des lésions précancéreuses, voire des cancers.</p>'
+  }) %>
+
+  <div class="content content--extra-padding-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content__text alert alert--success">
+            <p>Une infection HPV peut avoir des conséquences graves.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row center-xs">
+        <div class="col-md-8 col-sm-10 col-xs-12">
+          <p class="title title--sub title--lightweight">Découvrez les details des conséquences possibles en cliquant sur les images ci-dessous <br><br></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="/assets/images/content/consequences/content1.jpg" alt="" class="content__image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%= partial("shared/footer", :locals => {
+  :extra_classes => ''
+}) %>
