@@ -4,16 +4,51 @@
   width: 100%;
   height: auto;
   margin: 0;
+  overflow:
 
   &--reversed {
 
   }
 
+  @include media('<phablet') {
+    &--left,
+    &--right {
+      .funnel__image--wrap {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 10vw;
+          background-color: $white;
+          transform-origin: 0 0;
+        }
+      }
+    }
+
+    &--left {
+      .funnel__image--wrap::before {
+        top: 0;
+        transform: skewY(-5.7deg);
+      }
+    }
+    &--right {
+      .funnel__image--wrap::before {
+        top: -10vw;
+        transform: skewY(5.7deg);
+      }
+    }
+  }
+
   &__image {
     display: block;
-    width: calc(50vw - 15px);
+    width: auto;
     height: auto;
-    max-width: calc(50vw - 15px);
+    min-height: 100%;
+    max-width: none;
 
     @include media('<phablet') {
       width: 100vw;
@@ -23,14 +58,19 @@
   }
 
   &__content {
-    display: block;
+    @include flexbox;
+    @include align-items(center);
     position: relative;
     width: 100%;
-    height: auto;
-    padding: 12.5vw 0;
+    height: 100%;
+    padding: 10vw 0;
 
     @include media('<phablet') {
       padding: 20vw 15px 70px;
+    }
+
+    &--inner {
+      display: block;
     }
 
     &__title {
@@ -42,6 +82,10 @@
       p {
         margin-bottom: 10px;
       }
+    }
+
+    &__button {
+      width: auto;
     }
   }
 }

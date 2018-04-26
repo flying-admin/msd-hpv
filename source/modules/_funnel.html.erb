@@ -1,6 +1,7 @@
 <%
   extra_classes ||= ""
   reverse ||= 'false'
+  direction ||= 'left'
   image ||= ''
   title ||= ''
   text ||= ''
@@ -8,23 +9,26 @@
 %>
 
 <div class="funnel <%= extra_classes %>
+  <% if(direction == 'right') %> funnel--right <% else %> funnel--left <% end %>
   <% if(reverse == 'true') %> funnel--reversed <% end %>">
   <div class="container">
-    <div class="row between-xs middle-xs <% if(reverse == 'true') %> reverse <% end %>">
+    <div class="row between-xs <% if(reverse == 'true') %> reverse <% end %>">
       <div class="col-md-5 col-sm-6 col-xs-12">
         <div class="funnel__content">
-          <p class="funnel__content__title title"><%= title %></p>
-          <div class="funnel__content__text text"><%= text %></div>
-          <%= partial("modules/button", :locals => {
-            :extra_classes => 'btn--primary funnel__content__button',
-            :extra_attributes => '',
-            :type => "link",
-            :text => button[:text],
-            :link => button[:link],
-          }) %>
+          <div class="funnel__content--inner">
+            <p class="funnel__content__title title"><%= title %></p>
+            <div class="funnel__content__text text"><%= text %></div>
+            <%= partial("modules/button", :locals => {
+              :extra_classes => 'btn--primary funnel__content__button',
+              :extra_attributes => '',
+              :type => "link",
+              :text => button[:text],
+              :link => button[:link],
+            }) %>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 funnel__image--wrap">
         <img src="<%= image %>" alt="" class="funnel__image">
       </div>
     </div>
