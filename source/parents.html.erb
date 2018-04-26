@@ -1,0 +1,64 @@
+---
+title: Proyect Index
+layout: layout
+---
+<%= partial("shared/header", :locals => {
+  :extra_classes => ''
+}) %>
+
+<div class="content__wrapper">
+
+  <%= partial("modules/intro", :locals => {
+    :extra_classes => 'intro--simplified',
+    :image => 'http://placehold.it/1440x484',
+    :title => 'Comment les parents<br />peuvent-ils agir?',
+  }) %>
+
+  <%= partial("modules/slanted", :locals => {
+    :extra_classes => 'slanted--green',
+    :overflow => 'false',
+    :contains => 'true',
+    :direction => 'right',
+    :reverse => 'true',
+    :single => 'true',
+    :title => '<span class="title--lightweight">Etre bien informé est une première étape dans la protection contre l’HPV.</span>',
+    :text => 'En tant que parents, vous désirez par-dessus tout éviter que vos enfants soient malades ou courent un risque de maladie. Mieux nous connaissons les risques encourus par nos enfants en termes de santé, mieux nous pouvons les protéger.'
+  }) %>
+
+  <div class="content content--reduced-padding-bottom">
+    <div class="container">
+      <div class="row between-sm middle-sm">
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <img src="/assets/images/content/parents/content1.png" alt="" class="content__image">
+        </div>
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <div class="content__text">
+            <p class="title">
+              Que faire pour protéger vos enfants ?
+            </p>
+            <p class="text">
+              Il est important de pouvoir parler ouvertement avec vos enfants de la sexualité et des risques possibles. Choissisez le bon moment et utilisez des mots qui vous mettent à l’aise.
+            </p>
+            <p class="text">
+              Leur proposer d’acheter des préservatifs. Leur proposer une visite chez le médecin ou le gynécologue... pour la prescription d’un contraceptif.
+            </p>
+            <p class="text">
+              Leur parler des maladies sexuellement transmissibles. Vaccinez vos enfants contre l’HPV.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="alert alert--success">
+            <p>Si vos enfants n’ont pas été vaccinés par la médecine scolaire,<br />il est important d’évoquer la vaccination avec eux et avec votre médecin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%= partial("shared/footer", :locals => {
+  :extra_classes => ''
+}) %>
