@@ -25,6 +25,7 @@
 
 [data-icon]:before,
 .icon-caret-down:before,
+.icon-caret-down-rounded:before,
 .icon-facebook:before,
 .icon-gplus:before,
 .icon-linkedin:before,
@@ -45,6 +46,7 @@
 }
 
 .icon-caret-down:before { content: "\f101"; }
+.icon-caret-down-rounded:before { content: "\f106"; }
 .icon-facebook:before { content: "\f103"; }
 .icon-gplus:before { content: "\f104"; }
 .icon-linkedin:before { content: "\f105"; }
@@ -52,6 +54,7 @@
 .icon-twitter:before { content: "\f102"; }
 
 $font-msd-hpv-icons-caret-down: "\f101";
+$font-msd-hpv-icons-caret-down-rounded: "\f106";
 $font-msd-hpv-icons-facebook: "\f103";
 $font-msd-hpv-icons-gplus: "\f104";
 $font-msd-hpv-icons-linkedin: "\f105";
