@@ -1,12 +1,12 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2018-4-24: Created with FontForge (http://fontforge.org)
+2018-4-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Apr 24 17:35:58 2018
- By María Peña Jaquete
+Created by FontForge 20180321 at Fri Apr 27 10:07:49 2018
+ By Alejandro Garcia Ximenez
 
 </metadata>
 <defs>
@@ -22,13 +22,16 @@ Created by FontForge 20170925 at Tue Apr 24 17:35:58 2018
     bbox="-5.67796e-05 -65.5381 512 449.538"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+0020-F105"
+    unicode-range="U+0020-F106"
   />
     <missing-glyph />
     <glyph glyph-name="space" unicode=" " horiz-adv-x="200" 
  />
     <glyph glyph-name="caret-down" unicode="&#xf101;" 
 d="M256 -64l-256 512h512z" />
+    <glyph glyph-name="caret-down-rounded" unicode="&#xf106;" 
+d="M301.795 27.5889c-4.9541 -9.9082 -12.9893 -17.9424 -22.8975 -22.8965c-25.292 -12.6465 -56.0459 -2.39453 -68.6924 22.8965l-173.156 346.313c-3.55469 7.10938 -5.40527 14.9492 -5.40527 22.8975c0 28.2773 22.9229 51.2002 51.2002 51.2002h346.312
+c7.94922 0 15.7881 -1.85059 22.8975 -5.40527c25.292 -12.6455 35.5439 -43.4004 22.8975 -68.6924z" />
     <glyph glyph-name="gplus" unicode="&#xf104;" 
 d="M0.433594 296.004c1.40527 82.4248 78.708 154.612 162.793 151.862c40.2842 1.83008 78.1572 -15.3555 109.015 -39.4941c-13.165 -14.6641 -26.8027 -28.7998 -41.3779 -42.0156c-37.0908 25.1357 -89.8516 32.3125 -126.941 3.2832
 c-53.0713 -35.9766 -55.4824 -120.923 -4.44434 -159.649c49.6387 -44.1562 143.467 -22.2275 157.183 45.375c-31.0967 0.458008 -62.2656 0 -93.3564 0.991211c-0.0771484 18.1816 -0.155273 36.3633 -0.0771484 54.5449
