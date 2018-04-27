@@ -41,8 +41,14 @@
     }
     &__logo {
       height: 52px;
+      padding-left: 20px;
       @include media("<desktop") {
-        padding-left: 20px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+      @include media("<tablet") {
+        padding-bottom: 14px;
+        padding-top: 14px;
       }
       @include media("<phablet") {
         padding-left: 0;
@@ -138,20 +144,20 @@
   }
   &--sticky {
     .header__content .btn-menu-mobile .menu-bar {
-      background-color: $blackish;
+
       &:after,
       &:before {
-        background-color: $blackish;
+
       }
     }
     .header--main {
-      
+
     }
     .header__content__nav {
       ul {
         li {
           a {
-            color: $black;
+
           }
         }
       }
