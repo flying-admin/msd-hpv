@@ -134,6 +134,9 @@
     @include media('>desktop') {
       bottom: 120px;
     }
+    @include media('>1920px') {
+      bottom: 200px;
+    }
   }
 
   &__social {
