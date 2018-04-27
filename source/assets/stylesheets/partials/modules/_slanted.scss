@@ -34,16 +34,6 @@
     }
   }
 
-  &--reversed {
-    &.slanted--contains {
-      padding: 12vw 0 10vw;
-    }
-
-    &.slanted--no-contains {
-      padding: 12vw 0 0;
-    }
-  }
-
   &--right {
     &::before {
       transform-origin: 0% 0%;
@@ -57,7 +47,7 @@
     &.slanted--overflow {}
 
     .slanted__content {
-      margin: -2.5vw 0 0;
+      padding-top: 10vw !important;
     }
   }
 
@@ -74,9 +64,32 @@
     &.slanted--overflow {}
 
     .slanted__content {
-      margin: -10vw 0 0;
+      padding-bottom: 10vw !important;
     }
   }
+
+  &--reversed {
+    &.slanted--contains {
+      padding: 12vw 0 10vw;
+    }
+
+    &.slanted--no-contains {
+      padding: 12vw 0 0;
+    }
+
+    &.slanted--right {
+      .slanted__content {
+        padding-bottom: 10vw !important;
+      }
+    }
+
+    &.slanted--left {
+      .slanted__content {
+        padding-top: 10vw !important;
+      }
+    }
+  }
+
 
   &--green {
     &::before {
@@ -86,11 +99,26 @@
 
   &--purple {
     &::before {
-      background-image: linear-gradient(to top right, #EC7AFF, #271E7B);
+      background-image: linear-gradient(to top right, #C96AE7, #663CA6);
     }
   }
 
+  &--green-inverse {
+    &::before {
+      background-image: linear-gradient(to top right, #04887C, #19D0BF);
+    }
+  }
+
+  &--purple-inverse {
+    &::before {
+      background-image: linear-gradient(to bottom right, #663CA6, #C96AE7);
+    }
+  }
+
+
   &--single {
+    padding: 10vw 0 !important;
+    
     .slanted__content {
       padding-top: 56px;
       margin: 0;
@@ -121,6 +149,7 @@
     width: 100%;
     height: auto;
     padding: 5vw 0;
+
     @include media('<tablet') {
       padding: 10vw 0;
     }
@@ -129,12 +158,13 @@
       margin: 0;
     }
 
-    &__title {
-      margin: 0 0 35px;
+    &__title + &__text {
+      margin: 35px 0 0;
     }
 
-    &__text {
-      margin: 0 0 30px;
+    &__text  +  &__button{
+      margin: 30px 0 0;
+
       p {
         margin-bottom: 10px;
       }

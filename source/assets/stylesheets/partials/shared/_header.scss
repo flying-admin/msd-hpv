@@ -14,6 +14,7 @@
 
     background-color: transparent;
     border-bottom: 1px solid rgba($white, 0.3);
+    transition: all 0.5s;
     @include media("<phablet") {
       height: 71px;
     }
@@ -57,6 +58,12 @@
       &__logo {
         height: 100%;
         width: auto;
+      }
+      .logo-black {
+        display: none;
+      }
+      .logo-white {
+        display: block;
       }
     }
     &__nav {      
@@ -158,6 +165,35 @@
         li {
           a {
 
+          }
+        }
+      }
+    }
+  }
+  &.after-intro {
+    .header__content {
+      .logo-black {
+        display: block;
+      }
+      .logo-white {
+        display: none;
+      }
+    }
+    .header__content .btn-menu-mobile .menu-bar {
+      background-color: $blackish;
+      &:after,
+      &:before {
+        background-color: $blackish;
+      }
+    }
+    .header--main {
+      background-color: $white;
+    }
+    .header__content__nav {
+      ul {
+        li {
+          a {
+            color: $black;
           }
         }
       }
