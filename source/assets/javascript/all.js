@@ -1,11 +1,17 @@
 var Project = {};
 
 Project.init = function(){
-  
+
 };
 
-$(document).on("ready", function(){
+$(function(){
   Project.init();
+
+  $('.accordion__header').on('click', function(){
+    console.log('accordion');
+    $(this).closest('.accordion').toggleClass('open');
+  });
+
 });
 
 $(window).on("load", function(){
