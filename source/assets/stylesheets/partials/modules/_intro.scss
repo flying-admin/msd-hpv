@@ -209,6 +209,9 @@
       top: auto;
       bottom: 180px;
       @include media('>desktop') {
+        bottom: 210px;
+      }
+      @include media('>extended_desktop') {
         bottom: 265px;
       }
       @include media('>1920px') {
