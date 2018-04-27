@@ -8,7 +8,6 @@ $(function(){
   Project.init();
 
   $('.accordion__header').on('click', function(){
-    console.log('accordion');
     $(this).closest('.accordion').toggleClass('open');
   });
 
@@ -75,5 +74,15 @@ $(window).on("scroll", function(){
   }
   else if(scrollY <= headerOffset && header.hasClass('header--sticky')) {
     header.removeClass('header--sticky');
+  }
+
+  if ( $('.intro').length > 0 ) {
+    introHeight = $('.intro').height() - ($(window).width() / 10 );
+    if ( scrollY > introHeight && !header.is('.after-intro') ) {
+      header.addClass('after-intro');
+    }
+    if ( scrollY <= introHeight && header.is('.after-intro') ) {
+      header.removeClass('after-intro');
+    }
   }
 });
