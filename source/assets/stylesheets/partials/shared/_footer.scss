@@ -16,7 +16,7 @@
 
   &__logo {
     display: block;
-    height: 53px;
+    height: 40px;
     @include media("<phablet") {
       margin-bottom: 47px;
     }
