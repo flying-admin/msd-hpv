@@ -7,9 +7,7 @@
 %>
 
 <% if type === "link" %>
-  <a href="<%= link %>" class="btn <%= extra_classes %>" <%= extra_attributes %>>
-    <%= text %>
-  </a>
+  <%= link_to text, link, :class => 'btn ' + extra_classes, :relative => true %>
 <% else %>
   <button type="<%= type %>" class="btn <%= extra_classes %>" <%= extra_attributes %>>
     <%= text %>
