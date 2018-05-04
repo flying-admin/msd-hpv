@@ -56,8 +56,11 @@
         padding-right: 20px;
       }
       &__logo {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 277px;
+        @include media("<tablet") {
+          width: 128px;
+        }
       }
       .logo-black {
         display: none;
