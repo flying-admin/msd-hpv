@@ -150,7 +150,7 @@
     z-index: 2;
 
     @include media('<phablet') {
-      display: none;
+      left: 5px;
     }
     ul {
       li {
@@ -219,10 +219,14 @@
         top: 50%;
         transform: translateY(-50%);
       }
+      @include media('<phablet') {
+        padding: 0 15px;
+      }
       @include media('<mobile') {
         top: 50%;
         transform: translateY(-50%);
         bottom: auto;
+        padding: 0 10px;
       }
     }
   }
