@@ -60,7 +60,6 @@ end
 # Build-specific configuration
 configure :build do
   activate :relative_assets
-  activate :relative_links
   activate :minify_css
   activate :minify_javascript
   activate :minify_html do |html|
