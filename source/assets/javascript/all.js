@@ -37,6 +37,19 @@ $(window).on("load", function(){
       $('.header__content__nav').toggleClass('open');
     });
   }
+
+  if ( $('[data-scroll]').length > 0 ) {
+    $('[data-scroll]').on('click', function(ev) {
+      ev.preventDefault();
+      var headerOffset = $('.header').height();
+      var scrollTo = $($(this).attr('data-scroll'));
+      var scrollToTop = scrollTo.offset().top;
+
+      $('html, body').animate({
+          scrollTop: scrollToTop - headerOffset + 1
+      }, 1000, function() { });
+    });
+  }
 });
 
 $(window).on("resize", function(){
